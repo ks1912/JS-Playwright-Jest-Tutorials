@@ -1,6 +1,5 @@
 Note: These two keywords async/await were introduced in the newer version of JavaScript (ES8). 
 
-In this tutorial, you will learn about JavaScript async/await keywords with the help of examples.
 We use the async keyword with a function to represent that the function is an asynchronous function. 
     The async function returns a promise.
 

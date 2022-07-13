@@ -1,4 +1,4 @@
-There are 3 ways of writing a function in JavaScript:
+There are 4 ways of writing a function in JavaScript:
 
 Function Declaration
 Function Expression
