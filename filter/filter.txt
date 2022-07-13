@@ -1,0 +1,13 @@
+The filter() method returns a new array with all elements that pass the test defined by the given function.
+
+The syntax of the filter() method is:
+arr.filter(callback(element), thisArg)
+
+The filter() method takes in:
+1.    callback - The test function to execute on each array element; returns true if element passes the test, else false. It takes in:
+2.    element - The current element being passed from the array.
+3.    thisArg (optional) - The value to use as this when executing callback. By default, it is undefined.
+
+Notes:
+1.  filter() does not change the original array.
+2.  filter() does not execute callback for array elements without values.

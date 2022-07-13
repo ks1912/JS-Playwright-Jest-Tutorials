@@ -1,0 +1,21 @@
+Intro to JS (Completed)
+Variables (Completed)
+Array (Completed)
+Json (Completed)
+Print, JSON.stringyfy (Completed)
+callbacks, foreach, filter, map (Completed)
+object.keys object.hasownproperty (Completed)
+promises
+async await
+Node
+npm project, package.json, npm install
+library and Depndencies
+installing playwright
+folder structure, config
+record and playback of a script, walkthrough of the recorded script
+invoking a browser and navigating to a url
+working with different kind of elements
+working with api using playwright
+parallel execution
+jest
+Api automation using jest and axios

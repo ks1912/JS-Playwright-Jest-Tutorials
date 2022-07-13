@@ -1,0 +1,34 @@
+JSON stands for JavaScript Object Notation
+
+Example: '{"name":"John", "age":30, "car":null}'
+
+If you parse the JSON string with a JavaScript program, you can access the data as an object:
+let personName = obj.name; //John
+let personAge = obj.age; //30
+
+JavaScript has a built in function for converting JSON strings into JavaScript objects:
+JSON.parse()
+
+JavaScript also has a built in function for converting an object into a JSON string:
+JSON.stringify()
+
+The JSON.parse() function is used to convert a string into a JavaScript object while the JSON.stringify() function is used to convert a 
+JavaScript object into a string. The JSON string is used whenever we want to transfer data from one program to another, within the program, 
+it is better to use the JavaScript object rather than using the string operations. 
+JavaScript provides these two functions as built-in functions, and these functions are supported by all modern-day browsers.
+
+------------------------------
+
+JSON data is written as name/value pairs (aka key/value pairs).
+In JSON, values must be one of the following data types:
+1.    a string
+2.    a number
+3.    an object
+4.    an array
+5.    a boolean
+6.    null
+
+In JavaScript values can be all of the above, plus any other valid JavaScript expression, including:
+1.    a function
+2.    a date
+3.    undefined

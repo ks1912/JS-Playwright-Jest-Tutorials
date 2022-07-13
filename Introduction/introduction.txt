@@ -1,0 +1,10 @@
+JavaScript often abbreviated JS, is a programming language that is one of the core technologies 
+of the World Wide Web, alongside HTML and CSS.
+
+As of 2022, 98% of websites use JavaScript on the client side for web page behavior, 
+often incorporating third-party libraries. 
+
+All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+
+What is a JavaScript Testing Framework?
+The JavaScript testing framework is a dynamic framework based on JS.

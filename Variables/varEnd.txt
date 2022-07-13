@@ -1,0 +1,56 @@
+Redeclaration
+This one’s simple, you cannot redeclare a variable that was made with let.
+    var x = 0;
+    let y = 0;
+    var x = 1;
+    let y = 1; // "SyntaxError: Identifier 'y' has already been declared
+
+Global Object
+    At the top level, variables declared with var are added to the global object as a property whereas let variables are not.
+
+var x = 0;
+let y = 0;
+console.log(window.x); // 0
+console.log(window.y); // undefined
+
+Hoisting
+Variables defined with let are only accessible inside their block-scope while var variables are hoisted to the function level.
+
+// Using var
+console.log(i);  // undefined
+for(var i=0; i<4; i++) {
+  console.log(i);
+}
+console.log(i); // 4
+// Using let
+console.log(j); // "ReferenceError: j is not defined
+for(let j=0; j<4; j++) {
+  console.log(j);
+}
+console.log(j); // "ReferenceError: j is not defined
+
+Closures
+This one’s hard to understand if it’s a new concept, but a closure is a function that references a free variable.
+When we have a closure with a var variable, the reference is remembered, which can be troublesome when inside a loop where that variable changes.
+
+var functions = [];
+for (var i = 0; i < 3; i++) {
+  functions[i] = () => { console.log(i); };
+}
+for (var j = 0; j < 3; j++) {
+  functions[j]();
+}
+// 3 3 3
+
+Using let, a new reference is created each time.
+var functions = [];
+for (let i = 0; i < 3; i++) {
+  functions[i] = () => { console.log(i); };
+}
+for (var j = 0; j < 3; j++) {
+  functions[j]();
+}
+// 0 1 2
+Ultimately even if you aren’t 100% on these reasons and why they work the way they do, switching over to let will result in more explicit code that behaves consistently and will be easier to troubleshoot/maintain.
+
+Reference Link: https://levelup.gitconnected.com/stop-using-var-to-declare-variables-in-javascript-6c0caec16f43

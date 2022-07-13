@@ -1,0 +1,20 @@
+The map() method creates a new array with the results of calling a function for every array element.
+
+map() Syntax
+The syntax of the map() method is:
+arr.map(callback(currentValue), thisArg)
+
+map() Parameters
+The map() method takes in:
+
+callback - The function called for every array element. Its return values are added to the new array. It takes in:
+currentValue - The current element being passed from the array.
+thisArg (optional) - Value to use as this when executing callback. By default, it is undefined.
+
+map() Return Value
+Returns a new array with elements as the return values from the callback function for each element.
+
+Notes:
+map() does not change the original array.
+map() executes callback once for each array element in order.
+map() does not execute callback for array elements without values.
