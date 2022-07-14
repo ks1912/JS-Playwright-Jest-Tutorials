@@ -1,3 +1,7 @@
 The package.json file is the heart of any Node project. 
 It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project 
 that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+
+Once we install node we can see our package.json
+1. npm init (initialise a repo as node)
+2. we will see a package.json file
