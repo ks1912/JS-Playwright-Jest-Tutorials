@@ -1,0 +1,33 @@
+{
+  "tags": [
+    {
+      "id": "usersCookieBanner",
+      "name": "usersCookieBanner",
+      "content": "<script type=\"text/javascript\" src=\"https://static.parastorage.com/services/cookie-consent-banner-for-uou/1.685.0//app.bundle.min.js\" async=\"async\"></script>",
+      "position": "head",
+      "loadOnce": true,
+      "category": "essential",
+      "pages": []
+    }
+  ],
+  "errors": [],
+  "config": {
+    "consentPolicy": {
+      "essential": true,
+      "functional": false,
+      "analytics": false,
+      "advertising": false,
+      "dataToThirdParty": true
+    },
+    "geo": "IN",
+    "experiments": {
+      "specs.tagManagerConfigOverrides": "true",
+      "specs.tagManagerRenderTagByPageID": "true",
+      "specs.ignoreDisabledAppMarketTemplates": "false",
+      "specs.tagManagerNewSiteEmbedsService": "true",
+      "specs.cookieConsent.CcpHostsIntegration": "true",
+      "specs.cookieConsent.CcpML_MigrationUoU": "true",
+      "specs.returnNonEssentialCustomEmbeds": "true"
+    }
+  }
+}
