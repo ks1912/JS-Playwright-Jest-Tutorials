@@ -2,3 +2,6 @@ node_modules/
 /test-results/
 /playwright-report/
 /playwright/.cache/
+/Playwright/playwrightTest/package-lock.json
+/Playwright/playwrightTest/node_modules
+/Playwright/playwrightTest/playwright-report
