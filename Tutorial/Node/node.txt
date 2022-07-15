@@ -17,8 +17,8 @@ Blocking methods execute synchronously and non-blocking methods execute asynchro
 Using the File System module as an example, this is a synchronous file read:
 const fs = require('fs');
 const data = fs.readFileSync('/file.md'); // blocks here until file is read
-And here is an equivalent asynchronous example:
 
+And here is an equivalent asynchronous example:
 const fs = require('fs');
 fs.readFile('/file.md', (err, data) => {
   if (err) throw err;

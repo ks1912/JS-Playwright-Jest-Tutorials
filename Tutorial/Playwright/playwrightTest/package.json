@@ -1,0 +1,18 @@
+{
+  "name": "playwrighttest",
+  "version": "1.0.0",
+  "description": "playwright tutorial",
+  "main": "index.js",
+  "scripts": {},
+  "author": "feuji",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.23.3"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "faker": "^5.5.3",
+    "image-to-base64": "^2.2.0",
+    "screenshot-desktop": "^1.12.7"
+  }
+}
