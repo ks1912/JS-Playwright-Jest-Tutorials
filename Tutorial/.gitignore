@@ -5,3 +5,8 @@ node_modules/
 /Playwright/playwrightTest/package-lock.json
 /Playwright/playwrightTest/node_modules
 /Playwright/playwrightTest/playwright-report
+/axios-js-example/package-lock.json
+/axios-js-example/node_modules
+/axios-js-example/.cache
+/axios-js-example/dist
+/axios-js-example/.cache/
