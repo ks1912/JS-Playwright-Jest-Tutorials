@@ -1,0 +1,6 @@
+Playwright is an open-source test automation library initially developed by Microsoft contributors. 
+It supports programming languages such as Java, Python, C#, and NodeJS. 
+Playwright comes with Apache 2.0 License and is most popular with NodeJS with Javascript/Typescript.
+
+Playwright support C#,  Java, and Python.
+
