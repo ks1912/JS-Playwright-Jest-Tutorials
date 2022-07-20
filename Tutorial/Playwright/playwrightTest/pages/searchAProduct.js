@@ -14,10 +14,6 @@ exports.SearchAProduct = class SearchAProduct {
     );
   }
   async waitForSearchPage(page) {
-    // this.typeInSearchBox = page.locator('[aria-label="Search"]').fill("Laptop");
-    // this.clickOnLenevoLaptop = page
-    //   .locator('[aria-label="Lenovo"] >> text=Lenovo')
-    //   .click();
     let wasPageLoaded = false;
     try {
       await page.waitForSelector('[aria-label="Search"]', {

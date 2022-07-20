@@ -4,7 +4,7 @@ const { environment } = require("../config");
 test("can POST a REST API and check response using assertion style (using page)", async ({
   page,
 }) => {
-  await page.goto("https://www.github.com");
+  // await page.goto("https://www.github.com");
   const response = await page.request.post(
     `${environment.githubAPILink}webdriverjsdemo/webdriverjsdemo.github.io/posts`,
     { data: { title: "Post 4" } }
@@ -15,3 +15,8 @@ test("can POST a REST API and check response using assertion style (using page)"
   expect(body.title).toBe("Post 4");
   console.log(JSON.stringify(body));
 });
+
+
+// References: https://playwright.dev/docs/network
+// References: https://alisterbscott.com/2021/10/22/api-testing-using-playwright/
+

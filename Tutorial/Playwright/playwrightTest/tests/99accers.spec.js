@@ -32,28 +32,13 @@ test("test", async ({ page }) => {
     .fill("hyderabad");
   // Click text=Hyderabad (All) City
   await page.locator("text=Hyderabad (All) City").click();
-  // Click button:has-text("Search")
-  //   const response = await page.waitForResponse(
-  //     (response) =>
-  //       response
-  //         .url()
-  //         .includes(
-  //           "https://www.99acres.com/api-aggregator/content/locations/rei/srp?*"
-  //         ) && response.status() === 200
-  //   );
-  await page.locator('button:has-text("Search")').click();
-  const resp = await page.on("response", async (response) => {
-    const responses = await page.waitForResponse(
-      (response) =>
-        response
-          .url()
-          .includes(
-            "https://www.99acres.com/api-aggregator/content/locations/rei/srp?*"
-          ) && response.status() === 200
-    );
-    // page.locator('button:has-text("Search")').click(),
-    console.log("RESPONSE " + (await response.body()));
-  });
+  // Wait for api
+  const [response] = await Promise.all([
+    page.waitForResponse(
+      "https://www.99acres.com/api-aggregator/content/locations/rei/srp?*"
+    ),
+    page.locator('button:has-text("Search")').click(),
+  ]);
   // Print the response
-//   console.log(JSON.stringify(response));
+  console.log(JSON.stringify(response));
 });
