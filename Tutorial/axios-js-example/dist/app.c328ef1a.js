@@ -2677,6 +2677,11 @@ module.exports = require('./lib/axios');
 },{"./lib/axios":"node_modules/axios/lib/axios.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.addTodoItem = void 0;
+
 require("regenerator-runtime/runtime");
 
 var _axios = _interopRequireDefault(require("axios"));
@@ -2703,7 +2708,7 @@ var getTodoItems = /*#__PURE__*/function () {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return _axios.default.get("".concat(BASE_URL, "/todos?_limit=5"));
+            return _axios.default.get("".concat(BASE_URL, "/todos?completed=true"));
 
           case 3:
             response = _context.sent;
@@ -2727,8 +2732,80 @@ var getTodoItems = /*#__PURE__*/function () {
   return function getTodoItems() {
     return _ref.apply(this, arguments);
   };
+}();
+
+var form = document.querySelector("form");
+form.addEventListener("submit", /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(event) {
+    var title, todo, submitTodoItem;
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            event.preventDefault();
+            title = document.querySelector("#new-todos__title").value;
+            todo = {
+              userId: 1,
+              title: title,
+              completed: false
+            };
+            _context2.next = 5;
+            return addTodoItem(todo);
+
+          case 5:
+            submitTodoItem = _context2.sent;
+            updateTodoList(submitTodoItem);
+
+          case 7:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x) {
+    return _ref2.apply(this, arguments);
+  };
+}());
+
+var addTodoItem = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(todo) {
+    var response, newTodoItem;
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.prev = 0;
+            _context3.next = 3;
+            return _axios.default.post("".concat(BASE_URL, "/todos"), todo);
+
+          case 3:
+            response = _context3.sent;
+            newTodoItem = response.data;
+            console.log("Added a new Todo!", newTodoItem);
+            return _context3.abrupt("return", newTodoItem);
+
+          case 9:
+            _context3.prev = 9;
+            _context3.t0 = _context3["catch"](0);
+            console.error(_context3.t0);
+
+          case 12:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[0, 9]]);
+  }));
+
+  return function addTodoItem(_x2) {
+    return _ref3.apply(this, arguments);
+  };
 }(); // ...
 
+
+exports.addTodoItem = addTodoItem;
 
 var createTodoElement = function createTodoElement(item) {
   var todoElement = document.createElement("li");
@@ -2749,29 +2826,29 @@ var updateTodoList = function updateTodoList(todoItems) {
 };
 
 var main = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+    return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context4.prev = _context4.next) {
           case 0:
-            _context2.t0 = updateTodoList;
-            _context2.next = 3;
+            _context4.t0 = updateTodoList;
+            _context4.next = 3;
             return getTodoItems();
 
           case 3:
-            _context2.t1 = _context2.sent;
-            (0, _context2.t0)(_context2.t1);
+            _context4.t1 = _context4.sent;
+            (0, _context4.t0)(_context4.t1);
 
           case 5:
           case "end":
-            return _context2.stop();
+            return _context4.stop();
         }
       }
-    }, _callee2);
+    }, _callee4);
   }));
 
   return function main() {
-    return _ref2.apply(this, arguments);
+    return _ref4.apply(this, arguments);
   };
 }();
 
@@ -2804,7 +2881,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60011" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59333" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

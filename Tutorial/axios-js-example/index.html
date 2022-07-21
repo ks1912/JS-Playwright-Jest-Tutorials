@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vanilla Axios</title>
     <style>
+      /* ... */
+      #new-todos form {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        padding: 1em;
+        border: 1px solid white;
+      }
       body {
         background-color: #673ab7;
         color: white;
@@ -32,6 +39,17 @@
   </head>
   <body>
     <div>
+      <div id="new-todos">
+        <h1>New Todo</h1>
+        <form>
+          <label>
+            Name
+            <input type="text" id="new-todos__title" />
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <div>
       <h1>Todos</h1>
       <ul></ul>
     </div>
