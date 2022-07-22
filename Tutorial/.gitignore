@@ -12,3 +12,5 @@ node_modules/
 /axios-js-example/.cache/
 /Jest/jestFile/node_modules
 /Jest/jestFile/package-lock.json
+/Jest/jestAPI/node_modules
+/Jest/jestAPI/package-lock.json
