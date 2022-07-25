@@ -5,7 +5,7 @@ let api;
 
 describe("example to-do app", () => {
   beforeEach(() => {
-    cy.visit("https://www.feuji.com/");
+    // cy.visit("https://www.feuji.com/");
   });
 
   it("displays two todo items by default", () => {
