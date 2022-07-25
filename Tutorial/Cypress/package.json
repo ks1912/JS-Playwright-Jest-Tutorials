@@ -1,0 +1,49 @@
+{
+  "name": "insightsfirst_automation",
+  "version": "1.0.0",
+  "description": "InsightsFirst Automation",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts:admin": "cypress run --headed --browser=edge --env USER=ADMIN",
+    "scripts:project": "cypress run --headed --browser=edge --env USER=PROJECT,PROJECT=MEGA",
+    "scripts:microsoft": "cypress run --headed --browser=edge --env USER=PROJECT,PROJECT=MICROSOFT --spec cypress/integration/microsoft_test_scripts/dashboard_validations.spec.js",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test:admin": "npm run scripts:admin || npm run posttest",
+    "test:project": "npm run scripts:project || npm run posttest",
+    "test:microsoft": "npm run scripts:microsoft || npm run posttest"
+  },
+  "author": "Feuji Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@reportportal/agent-js-cypress": "^5.0.3",
+    "@shelex/cypress-allure-plugin": "^2.26.5",
+    "allure-commandline": "^2.17.2",
+    "axios": "^0.24.0",
+    "chai-colors": "^1.0.1",
+    "cypress": "^9.4.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-image-diff-js": "^1.19.2",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-real-events": "^1.7.0",
+    "faker": "^5.5.3",
+    "flat": "^5.0.2",
+    "form-data": "^2.3.3",
+    "junit-report-merger": "^3.0.2",
+    "mocha-junit-reporter": "^2.0.2",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "cypress-downloadfile": "^1.2.1",
+    "cypress-grep": "^2.13.1",
+    "mocha": "^9.2.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "mysql": "^2.18.1"
+  }
+}
