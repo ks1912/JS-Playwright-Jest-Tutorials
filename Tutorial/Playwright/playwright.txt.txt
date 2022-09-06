@@ -1,6 +1,20 @@
-Playwright is an open-source test automation library initially developed by Microsoft contributors. 
-It supports programming languages such as Java, Python, C#, and NodeJS. 
-Playwright comes with Apache 2.0 License and is most popular with NodeJS with Javascript/Typescript.
+What is Playwright?
+    Playwright is an open-source test automation library initially developed by Microsoft contributors. 
+    It supports programming languages such as Java, Python, C#, and NodeJS. 
+    Playwright comes with Apache 2.0 License and is most popular with NodeJS with Javascript/Typescript.
+    Playwright support C#,  Java, and Python.
 
-Playwright support C#,  Java, and Python.
+Why Choose Playwright as an Automation Framework?
+    Playwright’s first release was in January 2020.
+    Playwright can actually see into and control the browser rather than relying on a middle translation layer, 
+        it allows for the simulation of more insightful and relevant user scenarios.
 
+Advantages of Playwright Framework
+    Easy Setup and Configuration:
+    Multi-Browser Support: Chrome, Edge, Webkit (Safari), and Firefox are supported.
+    Multi-Language Support: Playwright supports Java, C#, Python, Javascript/ Typescript.
+    Types of Testing: Playwright supports Functional, End to End, and API Testing. Can be used in Accessibility Testing using third party( Not Worked on it ).
+    Parallel Browser Testing:  Playwright also supports the execution of simultaneous tests (AKA parallel testing) through Browser Context and can run parallel tests with multiple browsers
+    Support for Multiple Tab/Browser Window:  Playwright supports multi-tab and multi-window. Some test cases need to verify the scenario by launching a new window and returning to the parent window.
+    Built-in Reporters: Playwright framework, by default, comes with a lot of valuable reporters like List, Dot, Line, JSON, JUnit, and HTML Reporters. 
+    CI/CD Integration Support: Playwright supports CI/CD integration.

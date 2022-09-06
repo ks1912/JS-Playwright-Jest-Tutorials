@@ -1,0 +1,24 @@
+Setting up Axios
+
+Axios making requests
+    axios(config) 
+    axios(url[, config])
+    axios.get(url[, config])
+    axios.request(config)
+    axios.delete(url[, config])
+    axios.head(url[, config])
+    axios.options(url[, config])
+    axios.post(url[, data[, config]])
+    axios.put(url[, data[, config]])
+    axios.patch(url[, data[, config]])
+
+Axios Response object
+    When we send a request to a server, it returns a response. The Axios response object consists of:
+    data - the payload returned from the server
+    status - the HTTP code returned from the server
+    statusText - the HTTP status message returned by the server
+    headers - headers sent by server
+    config - the original request configuration
+    request - the request object
+
+https://zetcode.com/javascript/axios/
