@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1662547583555" clover="3.2.0">
+  <project timestamp="1662547583555" name="All files">
+    <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2" elements="9" coveredelements="7" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="app.js" path="C:\Users\kunal.s\OneDrive - Fujiyama Software Solutions Pvt Ltd\Desktop\Work\JavaScript\Array\Tutorial\JS-Playwright-Jest-Tutorials\Tutorial\Jest\jestAPI\src\app.js">
+      <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
