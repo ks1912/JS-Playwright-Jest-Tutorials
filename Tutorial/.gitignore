@@ -12,10 +12,5 @@ node_modules/
 /axios-js-example/.cache/
 /Jest/jestFile/node_modules
 /Jest/jestFile/package-lock.json
-<<<<<<< HEAD
-/Cypress/package-lock.json
-/Cypress/node_modules
-=======
 /Jest/jestAPI/node_modules
 /Jest/jestAPI/package-lock.json
->>>>>>> 3bd336045135dd9f217238dd1b8163a7e70eb8d4
