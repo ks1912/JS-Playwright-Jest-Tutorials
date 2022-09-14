@@ -7,7 +7,7 @@ const Chart = () => {
   const [toBeDisplay, setToBeDisplay] = useState(0);
   console.log(toBeDisplay);
   // All options to be displayed
-  if (toBeDisplay == 0) {
+  if (toBeDisplay === 0) {
     return (
       <div>
         <div className="row">
@@ -15,6 +15,7 @@ const Chart = () => {
             <button
               type="button"
               className="btn btn-primary p-2 m-2"
+              id="addUser"
               onClick={() => setToBeDisplay(toBeDisplay + 1)}
             >
               <span className="fs-2 p-5">
@@ -26,6 +27,7 @@ const Chart = () => {
             <button
               type="button"
               className="btn btn-secondary p-2 m-2"
+              id="deleteUser"
               onClick={() => setToBeDisplay(toBeDisplay + 2)}
             >
               <span className="fs-2 p-5">
@@ -37,6 +39,7 @@ const Chart = () => {
             <button
               type="button"
               className="btn btn-success p-2 m-2"
+              id="updateUser"
               onClick={() => setToBeDisplay(toBeDisplay + 3)}
             >
               <span className="fs-2 p-5">
@@ -49,7 +52,7 @@ const Chart = () => {
     );
   }
   // Add user
-  if (toBeDisplay == 1) {
+  if (toBeDisplay === 1) {
     return (
       <div>
         <Form />
@@ -82,7 +85,7 @@ const Chart = () => {
     );
   }
   // Delete User
-  if (toBeDisplay == 2) {
+  if (toBeDisplay === 2) {
     return (
       <div>
         <DeleteUser />
@@ -115,7 +118,7 @@ const Chart = () => {
     );
   }
   // Update User
-  if (toBeDisplay == 3) {
+  if (toBeDisplay === 3) {
     return (
       <div>
         <UpdateUser />
